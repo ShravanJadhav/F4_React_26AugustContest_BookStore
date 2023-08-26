@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import BookList from './components/BookList';
+import SearchBar from './components/SearchBar';
 
 function App() {
+  const [books, setBooks] = useState([]);
+
+  useEffect(() => {
+    fetchBooks('harry+potter');
+    fetchBooks('sherlock+holmes');
+  }, []);
+
+  const fetchBooks = async (query) => {
+    try {
+      const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
+      const data = await response.json();
+      setBooks(prevBooks => [...prevBooks, ...data.items]);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1>Online Bookstore</h1>
+        <SearchBar fetchBooks={fetchBooks} />
       </header>
+      <BookList books={books} />
     </div>
   );
 }

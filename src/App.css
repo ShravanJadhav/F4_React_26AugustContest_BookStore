@@ -1,38 +1,65 @@
+body{
+    background-color: black;
+    color: white;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  h1 {
+    margin: 0;
   }
-}
+  
+  .book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    
+  }
+  
+  .book-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    cursor: pointer;
+     
+    box-shadow: 0 8px 8px -4px lightblue;
+  }
+  
+  .book-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .book-detail {
+    margin-top: 10px;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .search-bar input {
+    padding: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .search-bar button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
