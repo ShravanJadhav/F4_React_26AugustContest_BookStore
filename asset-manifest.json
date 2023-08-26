@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/F4_React_26AugustContest_BookStore/static/css/main.f3ef6acc.css",
+    "main.js": "/F4_React_26AugustContest_BookStore/static/js/main.fa271aed.js",
+    "index.html": "/F4_React_26AugustContest_BookStore/index.html",
+    "main.f3ef6acc.css.map": "/F4_React_26AugustContest_BookStore/static/css/main.f3ef6acc.css.map",
+    "main.fa271aed.js.map": "/F4_React_26AugustContest_BookStore/static/js/main.fa271aed.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3ef6acc.css",
+    "static/js/main.fa271aed.js"
+  ]
+}
